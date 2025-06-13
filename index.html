@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GRN Inversiones - Inmobiliaria Profesional</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fafb;
+      color: #222;
+    }
+
+    nav.navbar {
+      background-color: #fff !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #0d6efd !important;
+    }
+
+    .nav-link {
+      color: #0d6efd !important;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #084298 !important;
+      text-decoration: underline;
+    }
+
+    .carousel-inner img {
+      height: 550px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .carousel-caption {
+      background-color: rgba(13, 110, 253, 0.75);
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      left: 5%;
+      right: 5%;
+      bottom: 20px;
+      text-align: left;
+    }
+
+    .carousel-caption h5 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .carousel-caption p {
+      font-size: 1.1rem;
+      color: #e9ecef;
+    }
+
+    #propiedades {
+      background-color: #fff;
+      padding: 3rem 0;
+    }
+
+    #propiedades h2 {
+      font-weight: 700;
+      color: #0d6efd;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .propiedad-card {
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.12);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .propiedad-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgb(0 0 0 / 0.2);
+    }
+
+    .propiedad-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .propiedad-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .propiedad-card h3 {
+      margin: 1rem;
+      font-weight: 700;
+      color: #084298;
+    }
+
+    .propiedad-card p {
+      margin: 0 1rem 1rem;
+      color: #555;
+    }
+
+    .propiedad-card .btn {
+      margin: 0 1rem 1rem;
+      width: calc(100% - 2rem);
+      font-weight: 600;
+      border-radius: 50px;
+    }
+
+    #porque-elegir {
+      background: #e9f0ff;
+      padding: 3rem 2rem;
+      border-radius: 15px;
+      max-width: 800px;
+      margin: 3rem auto;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    #porque-elegir h3 {
+      color: #0d6efd;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    #porque-elegir ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #porque-elegir ul li {
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      color: #084298;
+      font-weight: 600;
+    }
+
+    #porque-elegir ul li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #0d6efd;
+      font-size: 1.3rem;
+      top: 0;
+    }
+
+    /* Redes sociales arriba */
+    .social-icons {
+      background: #f0f4ff;
+      padding: 0.25rem 0;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.15);
+    }
+
+    footer {
+      background-color: #0a4275;
+      color: #fff;
+      padding: 2rem 1rem 1rem;
+    }
+
+    footer h5 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    footer p {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer .bi {
+      font-size: 1.5rem;
+      margin-right: 0.7rem;
+    }
+
+    footer .me-4 {
+      margin-right: 1.5rem !important;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-inner img {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Social Icons arriba -->
+  <div class="container-fluid d-flex w-100 justify-content-center gap-3 mt-0 pb-2 social-icons">
+    <a href="https://wa.me/529981477653" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/whatsapp.svg" alt="WhatsApp" />
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100094634732652&mibextid=opq0tG" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/facebook.svg" alt="Facebook" />
+    </a>
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7185799101056221184" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/linkedin.svg" alt="LinkedIn" />
+    </a>
+    <a href="https://www.youtube.com/@GRNInversionInmobiliaria/null" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/youtube.svg" alt="YouTube" />
+    </a>
+    <a href="https://www.instagram.com/grn_inversion_inmobiliaria?igsh=bHFmeWhsbG5yeDJo&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/instagram.svg" alt="Instagram" />
+    </a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">GRN Inversiones</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menú -->
+      <div class="collapse navbar-collapse justify-content-lg-end justify-content-center text-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Sobre Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carrusel -->
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="public/images/img1.jpg" class="d-block w-100" alt="Casa en Mérida" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Casa en Mérida</h5>
+          <p>Hermosa casa con piscina en la zona norte, perfecta para tu familia.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="public/images/img2.jpg" class="d-block w-100" alt="Departamento en Cancún" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Departamento en Cancún</h5>
+          <p>Moderno departamento cerca de la playa con todas las comodidades.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="public/images/img3.jpg" class="d-block w-100" alt="Terreno en Quintana Roo" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Terreno en Quintana Roo</h5>
+          <p>Gran oportunidad de inversión en zona turística.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+
+ <!-- Información del servicio -->
+<section class="container text-center mt-5">
+  <div class="row mt-4">
+    <div class="col-md-4">
+      <h3>🏠 Compra</h3>
+      <p>Encuentra la casa de tus sueños con nuestra selección de propiedades. Te ayudamos en todo el proceso para que tu compra sea fácil y segura.</p>
+    </div>
+    <div class="col-md-4">
+      <h3>📈 Venta</h3>
+      <p>¿Quieres vender tu propiedad? Nosotros te conectamos con compradores potenciales y optimizamos el proceso para obtener el mejor trato.</p>
+    </div>
+    <div class="col-md-4">
+      <h3>🔑 Renta</h3>
+      <p>Si buscas una propiedad para rentar, tenemos opciones ideales para ti. Encuentra la mejor ubicación y condiciones para tu estilo de vida.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Propiedades destacadas -->
+<section id="propiedades" class="container my-5">
+  <h2>Propiedades Destacadas</h2>
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <img src="public/images/img1.jpg" alt="Casa en venta Mérida" class="img-fluid rounded mb-3" />
+      <div class="propiedad-card">
+        <h3>Casa en Mérida</h3>
+        <p>3 recámaras, 2 baños, jardín y piscina.</p>
+        <a href="servicios.html" class="btn btn-primary">Ver más</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <img src="public/images/img2.jpg" alt="Departamento en Cancún" class="img-fluid rounded mb-3" />
+      <div class="propiedad-card">
+        <h3>Departamento en Cancún</h3>
+        <p>2 recámaras, vista al mar, con gimnasio y seguridad.</p>
+        <a href="servicios.html" class="btn btn-primary">Ver más</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <img src="public/images/img3.jpg" alt="Terreno en Quintana Roo" class="img-fluid rounded mb-3" />
+      <div class="propiedad-card">
+        <h3>Terreno en Quintana Roo</h3>
+        <p>Amplio terreno ideal para inversión turística.</p>
+        <a href="servicios.html" class="btn btn-primary">Ver más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Sección Información del servicio -->
+  <section id="porque-elegir" class="container my-5">
+    <h3>¿Por qué elegir GRN Inversiones?</h3>
+    <ul>
+      <li>Amplia experiencia en el mercado inmobiliario.</li>
+      <li>Atención personalizada y cercana.</li>
+      <li>Variedad de propiedades para todos los gustos y presupuestos.</li>
+      <li>Transparencia y confianza en cada operación.</li>
+      <li>Asesoría legal y financiera integral.</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-white">
+    <div class="container text-center text-md-start">
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <h5>Contacto</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> Calle 123, Col. Centro, Mérida, Yucatán</p>
+          <p><i class="bi bi-telephone-fill"></i> +52 998 147 7653</p>
+          <p><i class="bi bi-envelope-fill"></i>mnieto@grn.com.mx</p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h5>Horario</h5>
+          <p>Lunes a Viernes: 9:00 am - 6:00 pm</p>
+          <p>Sábado: 10:00 am - 2:00 pm</p>
+          <p>Domingo: Cerrado</p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h5>Redes Sociales</h5>
+          <a href="https://wa.me/529981477653" target="_blank" rel="noopener noreferrer" class="text-white me-4"><i class="bi bi-whatsapp"></i>WhatsApp</a><br />
+          <a href="https://www.facebook.com/profile.php?id=100094634732652&mibextid=opq0tG" target="_blank" rel="noopener noreferrer" class="text-white me-4"><i class="bi bi-facebook"></i>Facebook</a><br />
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7185799101056221184" target="_blank" rel="noopener noreferrer" class="text-white me-4"><i class="bi bi-linkedin"></i>LinkedIn</a><br />
+          <a href="https://www.youtube.com/@GRNInversionInmobiliaria/null" target="_blank" rel="noopener noreferrer" class="text-white me-4"><i class="bi bi-youtube"></i>YouTube</a><br />
+          <a href="https://www.instagram.com/grn_inversion_inmobiliaria?igsh=bHFmeWhsbG5yeDJo&utm_source=qr" target="_blank" rel="noopener noreferrer" class="text-white"><i class="bi bi-instagram"></i>Instagram</a>
+        </div>
+
+      </div>
+    </div>
+    <div class="text-center py-3" style="background-color: #07386d;">
+      © 2025 GRN Inversiones. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Título y meta datos -->
+  <title>Sobre Nosotros | GRN Inversiones</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    
+    #content-wrapper {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9fafb;
+      color: #222;
+    }
+
+    nav.navbar {
+      background-color: #fff !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #0d6efd !important;
+    }
+
+    .nav-link {
+      color: #0d6efd !important;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #084298 !important;
+      text-decoration: underline;
+    }
+
+    .carousel-inner img {
+      height: 550px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .carousel-caption {
+      background-color: rgba(13, 110, 253, 0.75);
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      left: 5%;
+      right: 5%;
+      bottom: 20px;
+      text-align: left;
+    }
+
+    .propiedad-card {
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.12);
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .propiedad-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgb(0 0 0 / 0.2);
+    }
+
+    /* Redes sociales arriba */
+    .social-icons {
+      background: #f0f4ff;
+      padding: 0.25rem 0;
+    }
+
+    .social-icons a img {
+      width: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover img {
+      transform: scale(1.15);
+    }
+
+    footer {
+      background-color: #0a4275;
+      color: #fff;
+      padding: 2rem 1rem 1rem;
+    }
+
+    footer h5 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    footer p {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    footer .bi {
+      font-size: 1.5rem;
+      margin-right: 0.7rem;
+    }
+
+    footer .me-4 {
+      margin-right: 1.5rem !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Social Icons arriba -->
+  <div class="container-fluid d-flex w-100 justify-content-center gap-3 mt-0 pb-2 social-icons">
+    <a href="https://wa.me/529981477653" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/whatsapp.svg" alt="WhatsApp" />
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100094634732652&mibextid=opq0tG" target="_blank"
+      rel="noopener noreferrer" aria-label="Facebook">
+      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/facebook.svg" alt="Facebook" />
+    </a>
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7185799101056221184" target="_blank"
+      rel="noopener noreferrer" aria-label="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/linkedin.svg" alt="LinkedIn" />
+    </a>
+    <a href="https://www.youtube.com/@GRNInversionInmobiliaria/null" target="_blank" rel="noopener noreferrer"
+      aria-label="YouTube">
+      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/youtube.svg" alt="YouTube" />
+    </a>
+    <a href="https://www.instagram.com/grn_inversion_inmobiliaria?igsh=bHFmeWhsbG5yeDJo&utm_source=qr" target="_blank"
+      rel="noopener noreferrer" aria-label="Instagram">
+      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/instagram.svg" alt="Instagram" />
+    </a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">GRN Inversiones</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menú -->
+      <div class="collapse navbar-collapse justify-content-lg-end justify-content-center text-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Sobre Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container text-center my-5">
+    <h1 class="section-title">Propiedades En Venta</h1>
+
+    <!-- Filtros -->
+    <div class="mb-4 text-center contact-section">
+      <h2>Filtrar Propiedades</h2>
+      <p>Coloca la ciudad de tu preferencia</p>
+      <div class="row g-2 justify-content-center">
+        <div class="col-md-6">
+          <select class="form-control" id="searchCiudad">
+            <option value="">Ciudad de preferencia</option>
+            <option>Cumbres</option>
+            <option>Cancun</option>
+            <option>La Laguna</option>
+            <option>Playa del Carmen</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <select class="form-control" id="searchPrecio">
+            <option value="">Sin límite de precio</option>
+            <option value="2000000">$2,000,000 MXN</option>
+            <option value="4000000">$4,000,000 MXN</option>
+            <option value="6000000">$6,000,000 MXN</option>
+            <option value="8000000">$8,000,000 MXN</option>
+          </select>
+        </div>
+      </div>
+      <button onclick="filtrarPropiedades()" class="btn btn-primary mt-3">
+        Buscar
+      </button>
+    </div>
+    <!-- Mensaje si no hay resultados -->
+    <div id="mensajeNoResultados">No se encontraron propiedades con esos filtros.</div>
+  </div> 
+
+    <!-- Propiedades -->
+    <div class="row g-4 m-5" id="propiedadesContainer">
+      <!-- Propiedad 1 -->
+      <div class="col-md-4 propiedad" data-ciudad="Cancun" data-recamaras="1" data-precio="3597660">
+        <div class="card shadow h-100 text-center">
+          <img src="public/images/prop1.jpg" class="card-img-top" alt="Residencia en Mérida" />
+          <div class="card-body">
+            <h5 class="card-title">Departamento de 1 recámara Cancún</h5>
+            <p class="card-text">1 recámara | 1.5 baños | $3,597,660 MXN</p>
+            <a href="propiedad1.html" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Propiedad 2 -->
+      <div class="col-md-4 propiedad" data-ciudad="La Laguna" data-recamaras="2" data-precio="5367944">
+        <div class="card shadow h-100 text-center">
+          <img src="public/images/prop2.jpg" class="card-img-top" alt="Departamento en Cancún" />
+          <div class="card-body">
+            <h5 class="card-title">
+              Departamento en pre venta 2 recámaras con vista a la laguna
+            </h5>
+            <p class="card-text">2 recámaras | 2 baños | $5,367,944 MXN</p>
+            <a href="propiedad2.html" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Propiedad 3 -->
+      <div class="col-md-4 propiedad" data-ciudad="Cancun" data-recamaras="3" data-precio="6679670">
+        <div class="card shadow h-100 text-center">
+          <img src="public/images/prop3.jpg" class="card-img-top" alt="Departamento en Cancún" />
+          <div class="card-body">
+            <h5 class="card-title">Departamento en Cancún 3 recámaras</h5>
+            <p class="card-text">3 recámaras | 3 baños | $6,679,670 MXN</p>
+            <a href="propiedad3.html" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <!-- Propiedad 4 -->
+      <div class="col-md-4 propiedad" data-ciudad="Cumbres" data-recamaras="1" data-precio="3740000">
+        <div class="card shadow h-100 text-center">
+          <img src="public/images/prop4.jpg" class="card-img-top" alt="Vista Laguna Cancún">
+          <div class="card-body">
+            <h5 class="card-title"> Departamento en preventa desde 1 recámara en Cumbres</h5>
+            <p class="card-text">1 recámara | 1 baño | $3,740,000 MXN</p>
+            <a href="propiedad4.html" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Propiedad 5 -->
+      <div class="col-md-4 propiedad" data-ciudad="Playa del Carmen" data-recamaras="2" data-precio="3500000">
+        <div class="card shadow h-100 text-center">
+          <img src="public/images/prop5.jpg" class="card-img-top" alt="Moderno Colosio">
+          <div class="card-body">
+            <h5 class="card-title">Departamento pent house en Venta en Mayakoba, Playa
+              del Carmen</h5>
+            <p class="card-text">2 recámaras | 2 baños | $3,500,000 MXN</p>
+            <a href="propiedad5.html" class="btn btn-primary">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div> 
+      <!-- Footer -->
+      <footer class="text-white">
+        <div class="container text-center text-md-start">
+          <div class="row">
+
+            <div class="col-md-4 mb-4">
+              <h5>Contacto</h5>
+              <p><i class="bi bi-geo-alt-fill"></i> Calle 123, Col. Centro, Mérida, Yucatán</p>
+              <p><i class="bi bi-telephone-fill"></i> +52 998 147 7653</p>
+              <p><i class="bi bi-envelope-fill"></i> mnieto@grn.com.mx</p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <h5>Horario</h5>
+              <p>Lunes a Viernes: 9:00 am - 6:00 pm</p>
+              <p>Sábado: 10:00 am - 2:00 pm</p>
+              <p>Domingo: Cerrado</p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <h5>Redes Sociales</h5>
+              <a href="https://wa.me/529981477653" target="_blank" rel="noopener noreferrer" class="text-white me-4"><i
+                  class="bi bi-whatsapp"></i>WhatsApp</a><br />
+              <a href="https://www.facebook.com/profile.php?id=100094634732652&mibextid=opq0tG" target="_blank"
+                rel="noopener noreferrer" class="text-white me-4"><i class="bi bi-facebook"></i>Facebook</a><br />
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7185799101056221184" target="_blank"
+                rel="noopener noreferrer" class="text-white me-4"><i class="bi bi-linkedin"></i>LinkedIn</a><br />
+              <a href="https://www.youtube.com/@GRNInversionInmobiliaria/null" target="_blank" rel="noopener noreferrer"
+                class="text-white me-4"><i class="bi bi-youtube"></i>YouTube</a><br />
+              <a href="https://www.instagram.com/grn_inversion_inmobiliaria?igsh=bHFmeWhsbG5yeDJo&utm_source=qr"
+                target="_blank" rel="noopener noreferrer" class="text-white"><i
+                  class="bi bi-instagram"></i>Instagram</a>
+            </div>
+
+          </div>
+        </div>
+        <div class="text-center py-3" style="background-color: #07386d;">
+          © 2025 GRN Inversiones. Todos los derechos reservados.
+        </div>
+      </footer>
+
+      <!-- Scripts Bootstrap y personalizados -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+      <script>
+        function filtrarPropiedades() {
+          const ciudadInput = document.getElementById("searchCiudad").value.toLowerCase();
+          const precioInput = document.getElementById("searchPrecio").value;
+
+          const propiedades = document.querySelectorAll(".propiedad");
+          let hayResultados = false;
+
+          propiedades.forEach((propiedad) => {
+            const ciudad = propiedad.getAttribute("data-ciudad").toLowerCase();
+            const precio = parseInt(propiedad.getAttribute("data-precio"));
+            if (isNaN(precio)) return; // o continuar con lógica personalizada
+
+            const cumpleCiudad =
+              ciudadInput === "" || ciudad.includes(ciudadInput);
+            const cumplePrecio = precioInput === "" || precio <= parseInt(precioInput);
+
+            if (cumpleCiudad && cumplePrecio) {
+              propiedad.style.display = "block";
+              hayResultados = true;
+            } else {
+              propiedad.style.display = "none";
+            }
+          });
+
+          const mensaje = document.getElementById("mensajeNoResultados");
+          if (!hayResultados) {
+            mensaje.style.display = "block";
+          } else {
+            mensaje.style.display = "none";
+          }
+        }
+      </script>
+</body>
+
+</html>

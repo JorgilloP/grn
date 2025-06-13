@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sobre Nosotros | GRN Inversiones</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f7f9fc;
+      margin: 0;
+      color: #333;
+    }
+    .social-icons {
+      background: #eef3fc;
+      padding: .5rem 0;
+      display: flex; justify-content: center; gap: 1rem;
+    }
+    .social-icons img {
+      width: 30px;
+      transition: transform .3s ease;
+    }
+    .social-icons img:hover { transform: scale(1.2); }
+
+    nav.navbar {
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .navbar-brand { font-size: 1.9rem; font-weight: 800; color: #0d6efd !important; }
+    .nav-link { font-weight: 600; color: #0d6efd !important; transition: color .3s; }
+    .nav-link:hover { color: #084298 !important; }
+
+    .hero {
+      background: linear-gradient(135deg, #e4efff 0%, #ffffff 100%);
+      padding: 4rem 2rem;
+      margin: 2rem auto;
+      max-width: 1000px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      animation: fadeIn 1s ease-in-out;
+    }
+    .hero h1 {
+      font-size: 2.4rem; font-weight: 800; color: #0d6efd;
+      margin-bottom: 1.2rem;
+    }
+    .hero p { font-size: 1.15rem; line-height: 1.7; margin-bottom: 1rem; }
+
+    .section-title {
+      font-size: 2rem; font-weight: 700; text-align: center;
+      margin: 3rem 0 1rem;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      width: 80px; height: 4px;
+      background: #0d6efd;
+      display: block; margin: 0.5rem auto 0;
+      border-radius: 2px;
+    }
+
+    .group-cards {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      padding: 0 1rem;
+    }
+    .card-light {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      padding: 2rem;
+      text-align: center;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .card-light:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+    }
+    .card-light h3 {
+      font-size: 1.4rem; color: #084298;
+      margin-bottom: .8rem; font-weight: 700;
+    }
+    .card-light p { font-size: 1rem; color: #555; }
+
+    footer {
+      background-color: #0a4275;
+      color: #fff;
+      padding: 3rem 1rem 1rem;
+      border-top: 4px solid #084298;
+    }
+    footer h5 { font-weight: 700; margin-bottom: 1rem; }
+    footer a { color: #fff; transition: opacity .3s; }
+    footer a:hover { opacity: .75; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 576px) {
+      .social-icons { padding: .75rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Social Icons arriba -->
+  <div class="social-icons">
+    <a href="https://wa.me/529981477653" target="_blank"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/whatsapp.svg" alt="WhatsApp"></a>
+    <a href="https://www.facebook.com/profile.php?id=100094634732652&mibextid=opq0tG" target="_blank"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/facebook.svg" alt="Facebook"></a>
+    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7185799101056221184" target="_blank"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/linkedin.svg" alt="LinkedIn"></a>
+    <a href="https://www.youtube.com/@GRNInversionInmobiliaria/null" target="_blank"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/youtube.svg" alt="YouTube"></a>
+    <a href="https://www.instagram.com/grn_inversion_inmobiliaria" target="_blank"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons/icons/instagram.svg" alt="Instagram"></a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">GRN Inversiones</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-lg-end text-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link active" href="nosotros.html">Sobre Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Sobre Nosotros</h1>
+    <p><strong>GRN Inversiones:</strong> Donde tus sueños y tu patrimonio se encuentran.</p>
+    <p>Sumamos más de 10 años ayudando a personas como tú a invertir con claridad y seguridad en Mérida, Yucatán y Quintana Roo.</p>
+    <p><strong>¿Por qué elegirnos?</strong> Porque creemos que tu inversión debe sentirse como un paso firme hacia tus metas. Te ofrecemos asesoría honesta, profesional y personalizada en cada paso.</p>
+    <p class="fw-bold text-primary">Invierte con propósito. Crece con GRN Inversiones.</p>
+  </div>
+
+  <!-- Misión y Visión -->
+  <h2 class="section-title">Misión y Visión</h2>
+  <div class="group-cards mb-5">
+    <div class="card-light section">
+      <h3>Misión</h3>
+      <p>Ofrecer soluciones inmobiliarias rentables, transparentes y accesibles para cada cliente.</p>
+    </div>
+    <div class="card-light section">
+      <h3>Visión</h3>
+      <p>Ser la firma líder y confiable en inversiones inmobiliarias, impulsada por la innovación y excelencia.</p>
+    </div>
+  </div>
+
+  <!-- Valores -->
+  <h2 class="section-title">Nuestros Valores</h2>
+  <div class="group-cards mb-5">
+    <div class="card-light section valor">
+      <h3>Transparencia</h3>
+      <p>Actuamos con honestidad y claridad en cada paso.</p>
+    </div>
+    <div class="card-light section valor">
+      <h3>Compromiso</h3>
+      <p>Nos involucramos como si tu inversión fuera la nuestra.</p>
+    </div>
+    <div class="card-light section valor">
+      <h3>Excelencia</h3>
+      <p>Brindamos un servicio detallista y de calidad superior.</p>
+    </div>
+  </div>
+
+  <!-- Servicios -->
+  <h2 class="section-title">Nuestros Servicios</h2>
+  <div class="group-cards mb-5">
+    <div class="card-light section servicio">
+      <h3>Venta de Propiedades</h3>
+      <p>Te conectamos con inversiones exclusivas y de alto potencial.</p>
+    </div>
+    <div class="card-light section servicio">
+      <h3>Renta de Propiedades</h3>
+      <p>Encuentra espacios habitacionales y comerciales que se adapten a ti.</p>
+    </div>
+    <div class="card-light section servicio">
+      <h3>Asesoría Inmobiliaria</h3>
+      <p>Te acompañamos para que tomes decisiones informadas y acertadas.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="text-white">
+    <div class="container text-center text-md-start">
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <h5>Contacto</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> Calle 123, Col. Centro, Mérida, Yucatán</p>
+          <p><i class="bi bi-telephone-fill"></i> +52 998 147 7653</p>
+          <p><i class="bi bi-envelope-fill"></i> mnieto@grn.com.mx</p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h5>Horario</h5>
+          <p>Lunes a Viernes: 9:00 am - 6:00 pm</p>
+          <p>Sábado: 10:00 am - 2:00 pm</p>
+          <p>Domingo: Cerrado</p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h5>Redes Sociales</h5>
+          <a href="https://wa.me/529981477653" target="_blank" rel="noopener noreferrer" class="text-white me-4"><i class="bi bi-whatsapp"></i>WhatsApp</a><br />
+          <a href="https://www.facebook.com/profile.php?id=100094634732652&mibextid=opq0tG" target="_blank" rel="noopener noreferrer" class="text-white me-4"><i class="bi bi-facebook"></i>Facebook</a><br />
+          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7185799101056221184" target="_blank" rel="noopener noreferrer" class="text-white me-4"><i class="bi bi-linkedin"></i>LinkedIn</a><br />
+          <a href="https://www.youtube.com/@GRNInversionInmobiliaria/null" target="_blank" rel="noopener noreferrer" class="text-white me-4"><i class="bi bi-youtube"></i>YouTube</a><br />
+          <a href="https://www.instagram.com/grn_inversion_inmobiliaria?igsh=bHFmeWhsbG5yeDJo&utm_source=qr" target="_blank" rel="noopener noreferrer" class="text-white"><i class="bi bi-instagram"></i>Instagram</a>
+        </div>
+
+      </div>
+    </div>
+    <div class="text-center py-3" style="background-color: #07386d;">
+      © 2025 GRN Inversiones. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+:root {
+    --bg-dark: #0d1117;
+    --color-acento: #312aac;
+    --color-secundario: #3a86ff;
+    --color-blanco: #ffffff;
+    --color-gris: #f1f1f1;
+    --transicion: 0.4s ease-in-out;
+}
+
+/* NAV y FOOTER */
+nav, footer, .social-icons {
+    background-color: var(--bg-dark);
+}
+
+.logo {
+    width: 220px;
+    border-radius: 12%;
+    transition: transform var(--transicion);
+}
+
+.logo:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+/* Enlaces del NAV */
+.navbar-nav .nav-link {
+    color: var(--color-blanco) !important;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: var(--transicion);
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-acento);
+    transition: width var(--transicion);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-acento);
+    transform: scale(1.1);
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* Botón hamburguesa */
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* ICONOS REDES SOCIALES */
+.social-icons a img {
+    width: 32px;
+    filter: brightness(0) invert(1); /* Icono blanco */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+    will-change: transform;
+}
+
+.social-icons a:hover img,
+.social-icons a:focus img {
+    filter: brightness(1) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+    animation: bounceScale 0.4s ease forwards;
+    outline: none;
+}
+
+.social-icons a:active img {
+    transform: scale(0.85);
+    filter: brightness(1) invert(1) drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+}
+
+/* Animación bounce + scale */
+@keyframes bounceScale {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+    40% {
+        transform: scale(1.2) translateY(-10px);
+    }
+    60% {
+        transform: scale(1.1) translateY(-5px);
+    }
+    100% {
+        transform: scale(1.15) translateY(-7px);
+    }
+}
+
+/* CARRUSEL */
+.carousel img {
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.carousel-item h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--color-blanco);
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 40px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.carousel-item a.btn {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 12px;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    text-transform: uppercase;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: all var(--transicion);
+}
+
+.carousel-item a.btn:hover {
+    transform: translateX(-50%) scale(1.1);
+    background-color: #265eff;
+    filter: brightness(1.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* FORMULARIO */
+.card {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: var(--bg-dark);
+    color: var(--color-acento);
+    padding: 16px;
+}
+
+.card-body {
+    background-color: var(--color-gris);
+    padding: 24px;
+}
+
+.form-control {
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+.btn-primary, .btn-secondary {
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: background-color var(--transicion);
+}
+
+.btn-primary {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+.btn-primary:hover {
+    background-color: #265eff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: var(--color-blanco);
+}
+
+.btn-secondary:hover {
+    background-color: #505050;
+}
+
+.btn-secondary i {
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+.card-footer a {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-secundario);
+    transition: color var(--transicion);
+}
+
+.card-footer a:hover {
+    color: var(--color-acento);
+}
+
+
